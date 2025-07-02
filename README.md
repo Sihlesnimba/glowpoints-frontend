@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# GlowPoints
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GlowPoints is a rewards tracking web application built using the MERN stack (MongoDB, Express, React, Node.js). It allows business owners to track customer visits, mark rewards eligibility, and export customer data.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User registration and login with username and PIN
+- Add new customers and track visits
+- QR code scanning to log visits
+- Rewards eligibility based on number of visits
+- Export customer data as CSV or PDF
+- Light/Dark mode toggle
+- Fully responsive UI
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Frontend:** React, Tailwind CSS, Framer Motion, qrcode.react, react-csv, jsPDF, Vercel
+**Backend:** Node.js, Express, MongoDB Atlas, Mongoose, dotenv, Render
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployment
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Hosted on **Vercel**
+- URL: [https://glowpoints.vercel.app](https://glowpoints.vercel.app)
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Hosted on **Render**
+- API Base URL: `https://glowpoints-backend.onrender.com`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started (Local Setup)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js & npm
+- MongoDB Atlas account
+- Git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clone the Repository
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/Sihlesnimba/glowpoints-frontend.git
+git clone https://github.com/Sihlesnimba/glowpoints-backend.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Backend Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cd glowpoints-backend
+npm install
+```
 
-## Learn More
+Create a `.env` file:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+MONGO_URI=your_mongodb_atlas_connection_string
+PORT=5000
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Start the backend:
 
-### Code Splitting
+```bash
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3. Frontend Setup
 
-### Analyzing the Bundle Size
+```bash
+cd ../glowpoints-frontend
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Usage
 
-### Making a Progressive Web App
+- Create an account or log in with your username and PIN.
+- Add customers with name and phone number.
+- Use QR code or manual log to register visits.
+- Track total visits and reward eligibility.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ for the Vibe Coding Hackathon 2.0

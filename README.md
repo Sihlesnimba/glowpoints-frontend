@@ -78,7 +78,3 @@ npm start
 - Add customers with name and phone number.
 - Use QR code or manual log to register visits.
 - Track total visits and reward eligibility.
-
----
-
-Built with ❤️ for the Vibe Coding Hackathon 2.0
